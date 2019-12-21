@@ -6,9 +6,9 @@
 
 //    if(!isset($_SESSION['admin_id']))
 //    {
-//    	header("location:/thanhphp/login");
+//    	header("location:/shopminphuc/login");
 //    }
-//
-//    define("ROOT", $_SERVER['DOCUMENT_ROOT'] ."/thanhphp/public/uploads/")
+
+    define("ROOT", $_SERVER['DOCUMENT_ROOT'] ."/shopminphuc/public/uploads/")
     
  ?>

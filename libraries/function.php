@@ -74,7 +74,10 @@ function activeAdmin($url)
     return basic_link() . $url;
 }
 
-
+//upload
+function uploads(){
+    return basic_link() . "public/uploads/";
+}
 //redirect về các trang (function_exists) kiểm tra sự tồn tại của hàm truyền vào
 if (!function_exists('redirectAdmin')) {
     function redirectAdmin($url = "")

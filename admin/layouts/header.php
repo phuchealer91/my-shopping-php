@@ -99,8 +99,8 @@
                 <li class="<?php echo isset($open) && $open == 'category' ? 'active' : ''; ?>">
                     <a href="<?php echo modules("category") ?>"><i class="fa fa-fw fa-edit"></i> Danh mục sản phẩm</a>
                 </li>
-                <li>
-                    <i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
+                <li class="<?php echo isset($open) && $open == 'product' ? 'active' : ''; ?>">
+                    <a href="<?php echo modules("product") ?>"><i class="fa fa-database"></i> Sản phẩm</a>
                 </li>
                 <li>
                     <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> bootstrap grid</a>
