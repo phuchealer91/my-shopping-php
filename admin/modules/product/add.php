@@ -146,7 +146,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             </div>
             <div class="form-group row">
                 <div class="col-md-8 d-flex justify-content-center">
-                    <button type="submit" class="btn btn-success">Lưu</button>
+                    <button type="submit" class="btn btn-success" name="submit">Lưu</button>
                 </div>
             </div>
         </form>
