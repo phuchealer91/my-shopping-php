@@ -2,6 +2,21 @@
 require_once  __DIR__."/../../autoload/autoload.php";
 $open = "product";
 $product = $db->fetchAll("product");
+    if(isset($_GET['page'])){
+        $p = $_GET['page'];
+    }
+    else {
+        $p = 1;
+    }
+    //Select dữ liệu lấy hết dữ liệu bên bảng trái (product) bên phải ko có dữ liệu thì để trống
+    $sql = "SELECT product.*, category.name AS category_id FROM product LEFT JOIN 
+            category ON category.id = product.category_id ORDER BY id DESC ";
+    $product = $db->fetchJone("product",$sql,$p,5,true);
+    if(isset($product['page'])){
+        $sotrang = $product['page'];
+        unset($product['page']);
+    }
+
 ?>
 <?php require_once  __DIR__."/../../layouts/header.php"; ?>
 <!--Page Heading NOI DUNG-->
@@ -67,18 +82,26 @@ $product = $db->fetchAll("product");
                 <nav aria-label="Page navigation example" >
                     <ul class="pagination">
                         <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
+                            <a class="page-link" href="?page=<?php echo ($p > 1 && $sotrang > 1) ? $p-1 : $p; ?>" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <?php for($i=1; $i <= $sotrang; $i++) { ?>
+                        <?php
+                            if(isset($_GET['page'])){
+                                $p = $_GET['page'];
+                            }
+                            else {
+                                $p = 1;
+                            }
+                        ?>
+                        <li class="page-item <?php echo ($i == $p) ? 'active' : ''; ?>">
+                            <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                        </li>
+                        <?php } ?>
                         <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
+                            <a class="page-link" href="?page=<?php echo ($p < $sotrang && $sotrang > 1) ? $p+1 : $p; ?>" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -89,6 +112,7 @@ $product = $db->fetchAll("product");
         </div>
     </div>
 </div>
+
 <!-- /.row -->
 <?php require_once  __DIR__."/../../layouts/footer.php"; ?>
 
