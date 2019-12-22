@@ -187,21 +187,23 @@
         }
          public  function fetchJone($table,$sql ,$page = 0,$row ,$pagi = false )
         {
-            $data = [];
+            $data = []; // lưu số trang được hiển thị lên url
             if ($pagi == true )
             {
-                $total = $this->countTable($table);
-                $sotrang = ceil($total / $row);
-                $start = ($page - 1 ) * $row ;
-                $sql .= " LIMIT $start,$row";
-                $data = [ "page" => $sotrang];
+                $total = $this->countTable($table); //hàm countTable sẽ trả về số hàng trong 1 table
+                $sotrang = ceil($total / $row); //số trang = tổng số hàng / số hàng Dev muốn hiển thị trong 1 page
+                $start = ($page - 1 ) * $row ; // nếu page = 1, start = 0 ; page = 2, start = 4...
+                $sql .= " LIMIT $start,$row"; // start là số item bắt đầu hiển thị, row là số item hiển thị trong trang đó
+                //start = 0 , row = 4 thì bắt đầu từ item 0 -> 4,
+                // start = 4, row = 4 thì bắt đầu từ item 4 -> kế tiếp bỏ 4 item đầu vì đã đc in ra trk đó rồi
+                $data = [ "page" => $sotrang]; //lưu số trang
                 $result = mysqli_query($this->link,$sql) or die("Lỗi truy vấn fetchJone ---- " .mysqli_error($this->link));
             }
             else
             {
                 $result = mysqli_query($this->link,$sql) or die("Lỗi truy vấn fetchJone ---- " .mysqli_error($this->link));
             }
-            
+
             if( $result)
             {
                 while ($num = mysqli_fetch_assoc($result))
