@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <title>ADMIN</title>
     <!-- Bootstrap Core CSS -->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">-->
     <link rel="stylesheet" type="text/css" href="<?php echo basic_link() ?>public/admin/css/font-awesome.min.css">
 <!--    <link rel="stylesheet" type="text/css" href="--><?php //echo basic_link() ?><!--public/admin/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -91,21 +92,21 @@
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
-                <li class="<?php echo isset($open) && $open=='admin' ? 'active' : ''; ?>">
+                <li class="<?php echo isset($opens) && $opens =='admin' ? 'active' : ''; ?>">
                     <a href="<?php echo activeAdmin('admin')?>"><i class="fa fa-fw fa-dashboard"></i> Bảng điều khiển</a>
                 </li>
                 <li class="<?php echo isset($open) && $open == 'category' ? 'active' : ''; ?>">
                     <a href="<?php echo modules("category") ?>"><i class="fa fa-fw fa-edit"></i> Danh mục sản phẩm</a>
                 </li>
                 <li class="<?php echo isset($open) && $open == 'product' ? 'active' : ''; ?>">
-                    <a href="<?php echo modules("product") ?>"><i class="fa fa-database"></i> Sản phẩm</a>
+                    <a href="<?php echo modules("product") ?>"><i class="fa fa-database"></i>&nbsp; Sản phẩm</a>
                 </li>
-                <li>
-                    <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> bootstrap grid</a>
+                <li class="<?php echo isset($open) && $open == 'admin' ? 'active' : ''; ?>">
+                    <a href="<?php echo modules("admin") ?>"><i class="fa fa-users"></i>&nbsp; Admin</a>
                 </li>
                 <li>
                     <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i
-                                class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                                class="fa fa-fw fa-arrows-v"></i> Thông tin <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="demo" class="collapse">
                         <li>
                             <a href="#">Dropdown Item</a>
@@ -114,9 +115,6 @@
                             <a href="#">Dropdown Item</a>
                         </li>
                     </ul>
-                </li>
-                <li class="active">
-                    <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
                 </li>
                 <li>
                     <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
