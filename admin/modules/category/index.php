@@ -44,7 +44,10 @@ require_once  __DIR__."/../../autoload/autoload.php";
                     <td><?php echo $stt;?></td>
                     <td><?php echo $item['name']?></td>
                     <td><?php echo $item['slug'] ?></td>
-                    <td><?php echo $item['status'] ?></td>
+                    <td align="center">
+                        <a href="home.php?id=<?php echo $item['id'] ?>" class="btn btn-default <?php echo $item['home'] == 1 ? 'btn-info' : 'btn-default';?>">
+                            <?php echo $item['home'] == 1 ? 'Hiển thị' : 'Không';  ?></a>
+                    </td>
                     <td><?php echo $item['created_at'] ?></td>
                     <td class="text-center">
                         <a class="btn btn-success" href="edit.php?id=<?php echo $item['id'];?>"><i class="fa fa-edit"></i> Sửa</a>
