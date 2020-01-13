@@ -1,6 +1,6 @@
 <?php
 require_once  __DIR__. "/autoload/autoload.php";
-    $open = "admin";
+    $opens = "admin";
 ?>
 <?php require_once  __DIR__. "/layouts/header.php"; ?>
             <!-- Page Heading NOI DUNG-->

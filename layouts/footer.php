@@ -1,151 +1,132 @@
-</div>
-<div class="container">
-                    <div class="col-md-4 bottom-content">
-                        <a href=""><img src="<?php echo base_url()?>public/frontend/images/free-shipping.png"></a>
-                    </div>
-                    <div class="col-md-4 bottom-content">
-                        <a href=""><img src="<?php echo base_url()?>public/frontend/images/guaranteed.png"></a>
-                    </div>
-                    <div class="col-md-4 bottom-content">
-                        <a href=""><img src="<?php echo base_url()?>public/frontend/images/deal.png"></a>
-                    </div>
-                </div>
-                <div class="container-pluid">
-                <section id="footer">
-                    <div class="container">
-                        <div class="col-md-3" id="shareicon">
-                            <ul>
-                                <li>
-                                    <a href=""><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="fa fa-google-plus"></i></a>
-                                </li>
-                                <li>
-                                    <a href=""><i class="fa fa-youtube"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-8" id="title-block">
-                            <div class="pull-left">  
-                           </div>
-                            <div class="pull-right">    
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="footer-button">
-                    <div class="container-pluid">
-                        <div class="container">
-                            <div class="col-md-3" id="ft-about">          
-                                <p>WEBSITE bán quần áo công sở. </br>
-                                Đến với chúng tôi, giao diện bắt mắt, dễ dàng sử dụng. </br>
-                            </p>
-                            </div>
-                            <div class="col-md-3 box-footer" >
-                                <h3 class="tittle-footer">Phạm Văn Thành</h3>
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i> MSV : 16103100620</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i> Ngày sinh : 31/05/1998 </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i>  Lớp : ĐH Tin10A6 </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i>ĐH Kinh tế Kĩ thuật Công nghiệp</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i> Nam Trực - Nam Định</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3 box-footer">
-                                <h3 class="tittle-footer">Nguyễn Anh Tuấn</h3>
-                               <ul>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i> MSV : 16103100634</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i> Ngày sinh : 16/04/1998 </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i>  Lớp : ĐH Tin10A6 </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i> ĐH Kinh tế Kĩ thuật Công nghiệp</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-angle-double-right"></i>
-                                        <a href=""><i></i> Lò Đúc - Hà Nội</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3" id="footer-support">
-                                <h3 class="tittle-footer"> Liên hệ</h3>
-                                <ul>
-                                    <li>
-                                        <p><i class="fa fa-home" style="font-size: 16px;padding-right: 5px;"></i> Số nhà 21, ngõ chùa cả, phường vị xuyên, TP. Nam Định </p>
-                                        <p><i class="sp-ic fa fa-mobile" style="font-size: 22px;padding-right: 5px;"></i> 0942495160</p>
-                                        <p><i class="sp-ic fa fa-envelope" style="font-size: 13px;padding-right: 5px;"></i> udanchi3105@gmail.com</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="ft-bottom">
-                    <p class="text-center">Design by ThanhPHP !!! </p>
-                </section>
-            </div>
-        </div>      
-    </div>
-            </div>      
+<div class="clearfix"></div>
+<div class="our-brand">
+    <h3 class="title"><span>Our Brands</span></h3>
+    <!-- <div class="control"><a id="prev_brand" class="prev" href="#">&lt;</a><a id="next_brand"
+            class="next" href="#">&gt;</a></div> -->
+    <div class="carousel-wrap">
+        <div class="owl-carousel">
+            <div class="item"><img src="<?php echo basic_link() ?>public/frontend/images/envato.png" ></div>
+            <div class="item"><img src="<?php echo basic_link() ?>public/frontend/images/themeforest.png"></div>
+            <div class="item"><img src="<?php echo basic_link() ?>public/frontend/images/photodune.png"></div>
+            <div class="item"><img src="<?php echo basic_link() ?>public/frontend/images/activeden.png"></div>
+            <div class="item"><img src="<?php echo basic_link() ?>public/frontend/images/envato.png"></div>
+            <div class="item"><img src="<?php echo basic_link() ?>public/frontend/images/envato.png"></div>
         </div>
-    <script  src="/thanhphp/public/frontend/js/slick.min.js"></script>
-    </body> 
-</html>
+    </div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="footer">
+    <div class="footer-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-logo"><a href="#"><img src="<?php echo basic_link() ?>public/frontend/images/logo.png" alt=""></a></div>
+                </div>
+                <div class="col-md-3 col-sm-6 contact">
+                    <h4 class="title">Liên hệ</h4>
+                    <p>Số 44, hẻm 4, Mậu Thân, Cần Thơ</p>
+                    <p>Điện Thoại: 1900 1008</p>
+                    <p>Email : phucb1706630@student.ctu.edu.vn</p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4 class="title">Hỗ trợ khách hàng</h4>
+                    <ul class="support">
+                        <li><a href="#">Thông tin sản phẩm</a></li>
+                        <li><a href="#">Giao hàng</a></li>
+                        <li><a href="#">Thanh toán</a></li>
+                        <li><a href="#">Thông tin khác</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ">
+                    <h4 class="title">Nhận thông tin</h4>
+                    <p class="sendContact">Hãy gửi thông tin cho chúng tôi</p>
+                    <form class="newsletter">
+                        <input type="text" name="" placeholder="Điền email của bạn...">
+                        <input type="submit" value="Gửi" class="button">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Copyright ©2019. Designed by <a href="#">Minh Phúc</a>. All rights reseved</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="social-icon">
+                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<script src="<?php echo basic_link() ?>public/frontend/js/jquery.min.js?v=12456"></script>
+<script src="<?php echo basic_link() ?>public/frontend/js/bootstrap.min.js?v=12456"></script>
+<script src="<?php echo basic_link() ?>public/frontend/js/slick.min.js?v=12456"></script>
+<script src="<?php echo basic_link() ?>public/frontend/js/owl.carousel.min.js?v=12456"></script>
+<script src="<?php echo basic_link() ?>public/frontend/js/owlBrands.js?v=12456"></script>
 <script type="text/javascript">
-    $(function() {
-        $hidenitem = $(".hidenitem");
-        $itemproduct = $(".item-product");
-        $itemproduct.hover(function(){$(this).children(".hidenitem").show(100);},function(){$hidenitem.hide(500);
-        })
-    })
-$(function(){
-    $updatecart = $(".updatecart");
-    $updatecart.click(function(e){
-        e.preventDefault();
-        $qty = $(this).parents("tr").find("#qty").val();
-        console.log($qty);
-        $key = $(this).attr("data-key");
-        $.ajax({
-            url : 'cap-nhat-gio-hang.php',
-            type : 'GET',
-            data : {'qty':$qty,'key':$key},
-            success:function(data)
-            {
-                if(data == 1)
-                {
-                    alert("Cập nhật thành công");
-                    location.href='gio-hang.php';
-                }
+    window.onload = function(){
+        $slideshow = $('.slider').slick({
+            dots:true,
+            autoplay:true,
+            arrows:true,
+            prevArrow:'<button type="button" class="slick-prev"></button>',
+            nextArrow:'<button type="button" class="slick-next"></button>',
+            slidesToShow:1,
+            slidesToScroll:1
+        });
+        $('.slide').click(function() {
+            $slideshow.slick('slickGoTo', parseInt($slideshow.slick('slickCurrentSlide'))+1);
+        });
+    };
+    $(document).ready(function () {
+        var dropper = $("a#drop"),
+            menu = $("nav>ul");
+        subMenu = $("nav>ul>li.submenu");
+        link = menu.find("li"),
+            dropper.on("click", function(e) {
+                menu.slideToggle();
+                e.preventDefault();
+            });
+        $(window).resize(function() {
+            var winWidth = $(this).width();
+            if (winWidth > 800 && menu.is(":hidden")) {
+                menu.removeAttr("style");
             }
         });
-    })
-})
+        link.on("click", function() {
+            var winWidth = $(window).width();
+            if (winWidth < 800 && !$(this).hasClass("submenu"))     {
+                menu.slideToggle();
+            }
+        });
+        subMenu.hover(function() {
+            $(this).children("ul").stop().slideDown("fast");
+        }, function() {
+            $(this).children("ul").stop().slideUp("fast");
+        });
+    });
+    $('.center').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+//    axjax
+    // Khi người dùng click Đăng ký
+
 </script>
+</body>
+</html>

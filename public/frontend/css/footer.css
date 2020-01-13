@@ -1,0 +1,93 @@
+.footer{
+    width: 100%;
+    background: #242424;
+}
+.footer .footer-info{
+    padding: 50px;
+}
+.footer-info .title{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+.footer-info .contact > p,
+.footer-info .support > li > a,
+.footer-info .sendContact {
+    font-size: 13px;
+    color: #9b9b9b;
+    text-decoration: none;
+    transition: .2s;
+}
+.footer-info .contact > p:hover,
+.footer-info .support > li > a:hover{
+    color: rgb(216, 57, 57);
+    cursor: pointer;
+}
+.footer-info form.newsletter input[type="text"]{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    border: 0;
+    outline: none;
+    margin-top: 8px;
+    transition: .2s;
+}
+.footer-info form.newsletter input[type="text"]:hover{
+    border: 1px solid rgb(187, 73, 73);
+}
+.footer-info form.newsletter input[type="submit"]{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    border: 0;
+    outline: none;
+    margin-top: 8px;
+    background: #fff;
+    transition: .2s;
+}
+.footer-info form.newsletter input[type="submit"]:hover{
+    background-color: rgb(216, 57, 57);
+}
+.footer .copyright-info{
+    position: relative;
+    padding: 15px 0;
+    border-top: 1px solid rgb(104, 101, 101);
+    background: #181818;
+    color: #fff;
+}
+.footer .copyright-info a{
+    color:rgb(194, 29, 29);
+}
+.footer .copyright-info .social-icon{
+    display: flex;
+    justify-content: flex-end;
+}
+.footer .copyright-info .social-icon li{
+    display: flex;
+    background: #fff;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+.footer .copyright-info .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .copyright-info .social-icon li:hover{
+   background-color: rgb(228, 60, 60);
+}
+.footer .copyright-info .social-icon li a{
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: gray;
+}
+

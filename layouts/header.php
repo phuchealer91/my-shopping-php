@@ -1,191 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Thành PHP</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="/thanhphp/public/frontend/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="/thanhphp/public/frontend/css/bootstrap.min.css">  
-        <script  src="/thanhphp/public/frontend/js/jquery-3.2.1.min.js"></script>
-        <script  src="/thanhphp/public/frontend/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="/thanhphp/public/frontend/css/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="/thanhphp/public/frontend/css/slick-theme.css"/>
-        <link rel="stylesheet" type="text/css" href="/thanhphp/public/frontend/css/style.css">
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="header">
-                <div id="header-top">
-                    <div class="container">
-                        <div class="row clearfix">
-                            <div class="col-md-6" id="header-text">
-                                <a>ThanhPHP</a><b>Thực tập WEB - Giáo viên : Hoàng Thị Phượng</b>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">-->
+<!--    <link rel="stylesheet" href="--><?php //echo basic_link() ?><!--public/frontend/css/bootstrap.css">-->
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/fontawesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/responsive.css?v=12456">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/header.css?v=62638">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/config.css?v=22456">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/menu.css?v22334">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/cartSearch.css?v=12367">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/slider.css?v=12456">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/products.css?v=49806">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/owl.css?v=12456">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/footer.css?v=22334">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/category.css?v=71394">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/slick.css?v=12456">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/slick-theme.css?v=12456">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/detail.css">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/owl.carousel.min.css?v=12456">
+    <link rel="stylesheet" href="<?php echo basic_link() ?>public/frontend/css/owl.theme.default.min.css?v=12456">
+    <title>Shoppe</title>
+</head>
+
+<body id="home" >
+<div class="wrapper">
+    <div class="header">
+        <div class="container" >
+            <div class="row">
+                <div class="logo"><a href="logo.html"><img src="public/frontend/images/logo.png" alt="logo"></a></div>
+                <div class="col-md-10 col-sm-12">
+                    <div class="header_top">
+                        <div class="row">
+                            <div class="col-md-9 col-sm-12">
+                                <ul class="topmenu">
+                                    <li><a href="#">Giới thiệu</a></li>
+                                    <li><a href="#">Tin tức</a></li>
+                                    <li><a href="#">Dịch vụ</a></li>
+                                    <li><a href="#">Hỗ trợ</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
+                                </ul>
                             </div>
-                            <div class="col-md-6">
-                                <nav id="header-nav-top">
-                                    <ul class="list-inline pull-right" id="headermenu">   
-                                        <?php if (isset($_SESSION['name_user'])): ?>
-                                            <li>Chào, <?php echo $_SESSION['name_user']; ?></li>
-                                                <li>
-                                                <a href="#"><i class="fa fa-user"> </i> Tài khoản <i class="fa fa-caret-down"></i></a>
-                                                <ul id="header-submenu">
-                                                    <li><a href="thong-tin-user.php"><i class="fas fa-exchange-alt"></i>Thông tin</a></li>
-                                                    <li><a href="gio-hang.php"><i class="fas fa-shopping-cart"></i>Giỏ hàng</a></li>
-                                                    <li><a href="thoat.php"><i class="fa fa-share-square-o"></i>Thoát</a></li>
-                                                </ul>
-                                            </li>
-                                        <?php else: ?>
-                                            <li>
-                                                <a href="dang-nhap.php"><i class="fa fa-lock"></i> Đăng nhập</a>
-                                            </li>
-                                            <li>
-                                                <a href="dang-ky.php"><i class="fa fa-user"></i> Đăng ký</a>
-                                            </li>
-                                        <?php endif; ?>
-                                    </ul>
-                                </nav>
+                            <div class="col-md-3 col-sm-12">
+                                <ul class="usermenu">
+                                    <li class="dropdown">
+                                            <a href="" class="us dropdbtn" >My Account</a>
+                                            <ul class="dropdown-content">
+                                                <li><a href="#">Link 1</a></li>
+                                                <li><a href="#">Link 1</a></li>
+                                                <li><a href="#">Link 1</a></li>
+                                            </ul>
+                                    </li>
+                                    <?php include_once("handle-dang-nhap.php");?>
+                                    <?php include_once("handle-dang-ky.php");?>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="row" id="header-main">
-                        <div class="col-md-5">
-                            <form class="form-inline" action="tim-kiem.php">
-                                <div class="form-group">
-                                    <label>
-                                        <select name="category" class="form-control">
-                                            <option> Sản phẩm</option>                                            
-                                        </select>
-                                    </label>
-                                    <input type="hidden" name="id" value="find" >
-                                    <input type="text" name="keyword" placeholder=" Nhập sản phẩm cần tìm" class="form-control">
-                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                </div>
-                            </form>
+                    <!-- <div class="clearfix"></div> -->
+                    <nav class="navbar navbar-expand-sm navbar-light">
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                                data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i class="fa fa-align-justify"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="<?php echo basic_link()?>">Trang Chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Đồ Nam</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Đồ Nữ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Khuyến Mãi</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false">Áo Khoác</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                        <a class="dropdown-item" href="#">Áo khoác ma bư</a>
+                                        <a class="dropdown-item" href="#">Áo khoác TNX</a>
+                                    </div>
+                                </li>
+                            </ul>
+
                         </div>
-                        <div class="col-md-4">
-                            <a href="">
-                                <img class="" src="../../thanhphp/public/frontend/images/u.png">
-                            </a>
-                        </div>
-                        <div class="col-md-3" id="header-right">
-                            <div class="pull-right">
-                                <div class="pull-left">
-                                    <i class="glyphicon glyphicon-phone-alt"></i>
-                                </div>
-                                <div class="pull-right">
-                                    <p id="hotline">HOTLINE</p>
-                                    <p>0942495160</p>
-                                </div>                
-                            </div>
-                        </div>
+                        <ul class="option">
+                            <li id="search" class="search">
+                                <form>
+                                    <input class="search-input" placeholder="Tìm kiếm......" type="text" value=""
+                                           name="search">
+                                    <input class="search-submit" type="submit" value="">
+                                </form>
+                            </li>
+                            <li class="option-cart">
+                                <a href="#" class="cart-icon">Giỏ hàng <span class="cart_no">02</span></a>
+                                <ul class="option-cart-item">
+                                    <li>
+                                        <div class="cart-item">
+                                            <div class="image"><img src=""
+                                                                    alt=""></div>
+                                            <div class="item-description">
+                                                <p class="name">Lincoln chair</p>
+                                                <p>Kích thước: <span class="light-red">20 cm</span><br>Số lượng:
+                                                    <span class="light-red">01</span></p>
+                                            </div>
+                                            <div class="right">
+                                                <p class="price">300.000 VND</p>
+                                                <a href="#" class="remove"><img src="public/frontend/images/remove.png"
+                                                                                alt="remove"></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><span class="total">TỔNG:<strong>300.00 VND</strong></span><button
+                                                class="checkout" onClick="location.href='checkout.html'">Đặt
+                                            Hàng</button></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+<!--                        <div class="navbar-header">-->
+<!--                            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">-->
+<!--                                <i class="fa fa-bars"></i>-->
+<!--                            </button>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
-            <div id="menunav">
-                <div class="container">
-                    <nav>
-                        <div class="home pull-left">
-                            <a href="index.php">Trang chủ</a>
-                        </div>
-                        <ul id="menu-main">
-                            <li>
-                                <a href="">Shop</a>
-                            </li>
-                            <li>
-                                <a href="phan-hoi.php">Phản hồi</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Blog</a>
-                            </li>
-                            <li>
-                                <a href="gioi-thieu.php">Về chúng tôi</a>
-                            </li>
-                        </ul>                  
-                        <ul class="pull-right" id="main-shopping">
-                            <li>
-                                <a href="gio-hang.php"><i class="fa fa-shopping-basket"> </i> Giỏ hàng</a>
-                            </li>
-                        </ul>                    
-                    </nav>
-                </div>
-            </div>      
-            <div id="maincontent">
-                <div class="container">
-                    <div class="col-md-3  fixside" >
-                        <div class="box-left box-menu" >
-                            <h3 class="box-title"><i class="fa fa-list"></i>  Danh mục</h3>
-                            <ul>
-                                <?php foreach ($category as $item) :?>
-                                    <li> <a href="danh-muc-san-pham.php?id=<?php echo $item['id']  ?>"> <?php echo $item['name'] ?> </a></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                        <div class="box-left box-menu">
-                            <h3 class="box-title"><i class="fa fa-warning"></i>  Sản phẩm mới </h3>                 
-                            <ul>
-                               <?php foreach ($productNew as $item):?>
-                                    <li class="clearfix">
-                                    <a href="chi-tiet-san-pham.php?id= <?php echo $item['id'] ?>">
-                                       <img src="<?php echo uploads() ?>/product/<?php echo $item['thunbar']?>" width="80px" height="80px" class="img-responsive pull-left">
-                                        <div class="info pull-right">
-                                            <p class="name"> <?php echo $item['name'] ?></p >
-                                            <?php if ($item['sale'] > 0): ?>
-                                                <p> <strike class="sale"><?php echo formatPrice($item['price']) ?> </strike> <b class="price"><?php echo formatpricesale($item['price'],$item['sale']) ?></b>
-                                            <?php else: ?>
-                                                <b class="price"><?php echo formatPrice($item['price']) ?></b>
-                                            <?php endif ?> 
-                                        </div>
-                                    </a>
-                                </li>
-                                <?php endforeach; ?>  
-                            </ul>
-                        </div>
-                        <div class="box-left box-menu">
-                            <h3 class="box-title"><i class="fa fa-warning"></i>  Sản phẩm bán chạy </h3>
-                            <ul>
-                                 <?php foreach ($productPay as $item):?>
-                                    <li class="clearfix">
-                                    <a href="chi-tiet-san-pham.php?id= <?php echo $item['id'] ?>">
-                                       <img src="<?php echo uploads() ?>/product/<?php echo $item['thunbar']?>" width="80px" height="80px" class="img-responsive pull-left">  
-                                        <div class="info pull-right">
-                                            <p class="name"> <?php echo $item['name'] ?></p >
-                                            <?php if ($item['sale'] > 0): ?>
-                                                <p> <strike class="sale"><?php echo formatPrice($item['price']) ?> </strike> <b class="price"><?php echo formatpricesale($item['price'],$item['sale']) ?></b>
-                                            <?php else: ?>
-                                                <b class="price"><?php echo formatPrice($item['price']) ?></b>
-                                            <?php endif ?> 
-                                        </div>
-                                    </a>
-                                </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    </div>
-                    <script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
-    $(document).ready(function(){
-        $("header-search").keyup(function(){
-            $.ajax({
-                type : "get",
-                url : "/tim-kiem.php",
-                data:'keyword='+$(this).val(),
-                beforeSend : function(){
-                    $("header-search").css("background","#FFF url() no-repeat 165px");
-                },
-                success:function(data){
-                    $("#suggesttion-box").show();
-                    $("#suggesttion-box").html('').append(data);
-                    $("#header-search").css("background","#FFF");
-                }
-                   });
-        });
-        $('#header-search').blur(function(){
-        })
-    });
-    function selectCountry(val){
-        $("#header-search").val(val);
-        $("#suggesttion-box").hide();
-    }
-</script>
+        </div>
+    </div>

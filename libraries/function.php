@@ -73,7 +73,10 @@ function activeAdmin($url)
 {
     return basic_link() . $url;
 }
-
+//format giá tiền
+function formatPrice($nums){
+    return number_format($nums, 0, ',', '.');
+}
 //upload
 function uploads(){
     return basic_link() . "public/uploads/";
@@ -84,6 +87,45 @@ if (!function_exists('redirectAdmin')) {
     {
         header("Location: " . basic_link() . "admin/modules/{$url}");
         exit();
+    }
+}
+//debug
+function _debug($data) {
+    echo '<pre style="background: #000; color: #fff; width: 100%; overflow: auto">';
+    echo '<div>Your IP: ' . $_SERVER['REMOTE_ADDR'] . '</div>';
+    $debug_backtrace = debug_backtrace();
+    $debug = array_shift($debug_backtrace);
+    echo '<div>File: ' . $debug['file'] . '</div>';
+    echo '<div>Line: ' . $debug['line'] . '</div>';
+    if(is_array($data) || is_object($data)) {
+        print_r($data);
+    }
+    else {
+        var_dump($data);
+    }
+    echo '</pre>';
+}
+function formatpricesale($number,$sale)
+{
+    $number = intval($number);
+    $sale = intval($sale);
+    $price = $number*(100 - $sale)/100;
+    return formatPrice($price);
+}
+function sale($number)
+{
+    $number = intval($number);
+    if( $number < 5000000)
+    {
+        return 0;
+    }
+    elseif ($number < 10000000)
+    {
+        return 5;
+    }
+    else
+    {
+        return 10;
     }
 }
 ?>
